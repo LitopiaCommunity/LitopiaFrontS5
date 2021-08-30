@@ -7,7 +7,36 @@
     <title>Litopia</title>
   </head>
   <body>
+    <div class="taskbar">
+      <div class="litopia-title"><h1 >LITOPIA</h1></div>
+      <nav class="menu-taskbar">
+        <ul>
+          <li><a href="/index.html" class="link-taskbar">Accueil</a></li>
+          <li><a href="/join-us.html" class="link-taskbar">Nous Rejoindre</a></li>
+          <li><a href="/members.html" class="link-taskbar">Membres</a></li>
+          <li><a href="/help-us.html" class="link-taskbar">Nous Soutenir</a></li>
+        </ul>
+      </nav>
+      <a href="" ><nav class="login-signin">
+        Connexion/Inscription ▼
+      </nav></a>
+    </div>
+    <nav class="header-dissotiation"></nav> 
     <div id="app"></div>
     <script type="module" src="/src/scripts/main.ts"></script>
+    <script>
+      //Code de visualisation de page active
+      let url = window.location.href;
+      let linkTaskbar = document.querySelectorAll('.link-taskbar');
+
+      linkTaskbar.forEach( (i,v) => {
+        console.log(i.href)
+          if (i.href == url)
+          {
+            i.classList.add('selected-link-taskbar')
+          }
+        });
+
+    </script>
   </body>
 </html>

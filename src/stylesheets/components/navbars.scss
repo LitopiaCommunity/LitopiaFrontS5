@@ -1,60 +1,47 @@
-.navbar-container{
+// large nav bar
+.navbar-container-lg{
   display: flex;
   align-items: stretch;
   background-color: var(--nav-bg);
   border-bottom: var(--primary-dark) solid 1px;
 
+  height: 80px;
+
+  // apply style to litopia title
   h1{
-    padding: 20px;
     display: flex;
     color: var(--primary);
     font-family: 'Bebas Neue', cursive;
     letter-spacing: 1em;
     font-size: 1em;
-    margin: auto 8vw auto 2vw
   }
 
+  // main navigation style for all liste element
   nav ul{
       display: flex;
       align-items: center;
+      height: 100%;
 
     li{
-        padding: 5px 20px;
-        margin: 0 10px;
+        margin: 0 0.5vw;
         display: flex;
         flex-flow: row;
         align-content: center;
-        height: 100%;
+        white-space: nowrap;
       }
   }
 
-  .nav-link::after .nav-link::before{
-    position: absolute;
-    background: var(--nav-bg);
-    z-index: -1;
-    transition: 1s;
-    content: '';
-  }
-
+  // nav li class nav-link style
   .nav-link{
     transition: ease-out 0.5s;
-    //border: var(--primary) solid 1px;
+    // debug ?
+    // border: var(--primary) solid 1px;
     a{
       transition: ease-out 0.5s;
       margin: auto;
       text-decoration: none;
       color: var(--font);
     }
-  }
-
-
-
-  .nav-link::after, .nav-link::before{
-    content: '';
-    display: inline-block;
-    width: 1px;
-    height: auto;
-    background-color: var(--nav-bg);
   }
 
   .nav-link:hover {
@@ -65,9 +52,14 @@
     }
   }
 
-  .nav-link:hover::after, .nav-link:hover::before{
-    transition: ease-out 0.5s;
-    background-color: var(--primary);
+
+  .nav-link::after, .nav-link::before{
+    content: '';
+    display: inline-block;
+    transition: 1s;
+    width: 1px;
+    height: auto;
+    background-color: var(--nav-bg);
   }
 
   .nav-link::after{
@@ -78,7 +70,23 @@
     margin-right: 10px;
   }
 
+  .nav-link:hover::after, .nav-link:hover::before{
+    transition: ease-out 0.5s;
+    background-color: var(--primary);
+  }
 
+  // selected / current nav link style
+  .selected {
+    a {
+      color: var(--primary);
+    }
+  }
+
+  .selected::after, .selected::before {
+    background-color: var(--primary);
+  }
+
+  // authentication button style
   .connect-container{
     display: flex;
     margin: 0 0 0 auto;
@@ -90,7 +98,110 @@
       margin: auto;
       a{
         color: black;
+        white-space: nowrap;
       }
     }
   }
 }
+
+// small nav bar
+.navbar-container-sm{
+
+  position: fixed;
+  bottom: 0;
+
+  height: 80px;
+  width: 100%;
+
+  background-color: var(--nav-bg);
+  border-top: var(--primary-dark) solid 1px;
+
+  nav, nav ul{
+    height: 100%;
+    width: 100%;
+  }
+
+  nav ul{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    li{
+      white-space: nowrap;
+    }
+  }
+
+  // nav li class nav-link style
+  .nav-link{
+    a{
+      text-decoration: none;
+      color: var(--font);
+    }
+  }
+
+  .selected {
+    a {
+      color: var(--primary);
+    }
+  }
+  
+}
+
+@media screen and (max-width: $lg) {
+
+  .navbar-container-sm{
+    display: flex;
+  }
+
+  .navbar-container-lg{
+    display: none;
+  }
+  
+}
+
+@media screen and (min-width: $lg) {
+
+  .navbar-container-sm{
+    display: none;
+  }
+
+  .navbar-container-lg{
+    display: flex;
+
+    h1{
+      padding: 10px 0.75vw;
+      margin: auto 3vw auto 2vw
+    }
+
+    nav ul{
+      li{
+        padding: 5px 0px;
+      }
+    }
+
+  }
+  
+}
+
+@media screen and (min-width: $xl) {
+
+  .navbar-container-lg{
+
+    h1{
+      padding: 20px 1vw;
+      margin: auto 8vw auto 2vw
+    }
+
+    nav ul{
+      li{
+        padding: 5px 1vw;
+      }
+    }
+
+  }
+  
+}
+
+
+

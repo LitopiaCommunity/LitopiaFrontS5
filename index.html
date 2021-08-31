@@ -1,34 +1,56 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8"/>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Litopia</title>
-</head>
-<body>
-<header>
-    <div class="navbar-container">
-        <h1>Litopia</h1>
-        <nav>
-            <ul>
-                <li class="nav-link selected"><a href="#">Acceuil</a></li>
-                <li class="nav-link"><a herf="#">Nous rejoindre</a></li>
-                <li class="nav-link"><a href="#">Membres</a></li>
-                <li class="nav-link"><a href="#">Nous Soutenir</a></li>
-            </ul>
-        </nav>
-        <div class="connect-container">
-            <div class="connect-wrapper">
-                <a>Se connecter / s'inscrire</a>
-                <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.7625 0L7.5 5.72345L13.2375 0L15 1.76202L7.5 9.26L0 1.76202L1.7625 0Z" fill="black"/>
-                </svg>
+
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Litopia</title>
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="navbar-container-lg">
+                <h1>Litopia</h1>
+                <nav>
+                    <ul>
+                        <li class="nav-link selected"><a href="#">Acceuil</a></li>
+                        <li class="nav-link"><a href="#">Nous rejoindre</a></li>
+                        <li class="nav-link"><a href="#">Membres</a></li>
+                        <li class="nav-link"><a href="#">Nous Soutenir</a></li>
+                    </ul>
+                </nav>
+                <div class="connect-container">
+                    <div class="connect-wrapper">
+                        <a>Se connecter / s'inscrire</a>
+                        <svg width="15" height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.7625 0L7.5 5.72345L13.2375 0L15 1.76202L7.5 9.26L0 1.76202L1.7625 0Z" fill="black"/>
+                        </svg>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</header>
-<div id="app"></div>
-<script type="module" src="/src/scripts/main.ts"></script>
-</body>
+
+            <div class="navbar-container-sm">
+
+                <nav>
+                    <ul>
+                        <li class="nav-link selected"><a href="#">Acceuil</a></li>
+                        <li class="nav-link"><a href="#">Nous rejoindre</a></li>
+                        <li class="nav-link"><a href="#">Membres</a></li>
+                        <li class="nav-link"><a href="#">Nous Soutenir</a></li>
+                        <li class="nav-link"><a href="#">Authentification</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </header>
+        
+        <div id="app"></div>
+        <script type="module" src="/src/scripts/main.ts"></script>
+
+    </body>
+
 </html>

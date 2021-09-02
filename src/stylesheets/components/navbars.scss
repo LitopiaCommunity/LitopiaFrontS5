@@ -1,5 +1,5 @@
 // large nav bar
-.navbar-container-lg{
+.navbar-container-lg {
   display: flex;
   align-items: stretch;
   background-color: var(--nav-bg);
@@ -8,7 +8,7 @@
   height: 80px;
 
   // apply style to litopia title
-  h1{
+  h1 {
     display: flex;
     color: var(--primary);
     font-family: 'Bebas Neue', cursive;
@@ -17,26 +17,26 @@
   }
 
   // main navigation style for all liste element
-  nav ul{
-      display: flex;
-      align-items: center;
-      height: 100%;
+  nav ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
 
-    li{
-        margin: 0 0.5vw;
-        display: flex;
-        flex-flow: row;
-        align-content: center;
-        white-space: nowrap;
-      }
+    li {
+      margin: 0 0.5vw;
+      display: flex;
+      flex-flow: row;
+      align-content: center;
+      white-space: nowrap;
+    }
   }
 
   // nav li class nav-link style
-  .nav-link{
+  .nav-link {
     transition: ease-out 0.5s;
     // debug ?
     // border: var(--primary) solid 1px;
-    a{
+    a {
       transition: ease-out 0.5s;
       margin: auto;
       text-decoration: none;
@@ -46,6 +46,7 @@
 
   .nav-link:hover {
     transition: ease-out 0.5s;
+
     a {
       transition: ease-out 0.5s;
       color: var(--primary);
@@ -53,7 +54,7 @@
   }
 
 
-  .nav-link::after, .nav-link::before{
+  .nav-link::after, .nav-link::before {
     content: '';
     display: inline-block;
     transition: 1s;
@@ -62,15 +63,15 @@
     background-color: var(--nav-bg);
   }
 
-  .nav-link::after{
+  .nav-link::after {
     margin-left: 10px;
   }
 
-  .nav-link::before{
+  .nav-link::before {
     margin-right: 10px;
   }
 
-  .nav-link:hover::after, .nav-link:hover::before{
+  .nav-link:hover::after, .nav-link:hover::before {
     transition: ease-out 0.5s;
     background-color: var(--primary);
   }
@@ -87,16 +88,18 @@
   }
 
   // authentication button style
-  .connect-container{
+  .connect-container {
     display: flex;
     margin: 0 0 0 auto;
     align-content: end;
     background-color: var(--primary-dark);
     height: auto;
-    .connect-wrapper{
+
+    .connect-wrapper {
       padding: 0 50px;
       margin: auto;
-      a{
+
+      a {
         color: black;
         white-space: nowrap;
       }
@@ -105,102 +108,114 @@
 }
 
 // small nav bar
-.navbar-container-sm{
+.navbar-container-sm {
 
   position: fixed;
   bottom: 0;
-
-  height: 80px;
   width: 100%;
 
   background-color: var(--nav-bg);
   border-top: var(--primary-dark) solid 1px;
 
-  nav, nav ul{
+  nav, nav ul {
     height: 100%;
     width: 100%;
   }
 
-  nav ul{
+  nav ul {
 
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 
-    li{
+    li {
       white-space: nowrap;
+      //margin: 0 5%;
+      padding: 10px 10px;
     }
   }
 
   // nav li class nav-link style
-  .nav-link{
-    a{
+  .nav-link {
+    a {
+      color: var(--font-secondary);
+      font-size: 10px;
       text-decoration: none;
-      color: var(--font);
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      &:hover{
+        @extend .selected;
+
+      }
     }
   }
 
   .selected {
-    a {
+    svg{
+      stroke: var(--primary);
+      width: 115%;
+    }
+    a{
+      font-size: 13px;
       color: var(--primary);
     }
   }
-  
 }
 
 @media screen and (max-width: $lg) {
 
-  .navbar-container-sm{
+  .navbar-container-sm {
     display: flex;
   }
 
-  .navbar-container-lg{
+  .navbar-container-lg {
     display: none;
   }
-  
+
 }
 
 @media screen and (min-width: $lg) {
 
-  .navbar-container-sm{
+  .navbar-container-sm {
     display: none;
   }
 
-  .navbar-container-lg{
+  .navbar-container-lg {
     display: flex;
 
-    h1{
+    h1 {
       padding: 10px 0.75vw;
       margin: auto 3vw auto 2vw
     }
 
-    nav ul{
-      li{
-        padding: 5px 0px;
+    nav ul {
+      li {
+        padding: 5px 0;
       }
     }
 
   }
-  
+
 }
 
 @media screen and (min-width: $xl) {
 
-  .navbar-container-lg{
+  .navbar-container-lg {
 
-    h1{
+    h1 {
       padding: 20px 1vw;
       margin: auto 8vw auto 2vw
     }
 
-    nav ul{
-      li{
+    nav ul {
+      li {
         padding: 5px 1vw;
       }
     }
 
   }
-  
+
 }
 
 

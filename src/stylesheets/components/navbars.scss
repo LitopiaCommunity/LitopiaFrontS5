@@ -143,9 +143,17 @@
       display: flex;
       flex-flow: column;
       align-items: center;
+      span{
+        transition: ease-in-out 0.3s;
+      }
+      svg{
+        transition: ease-in-out 0.3s;
+      }
       &:hover{
         @extend .selected;
-
+        span {
+          font-size: 10px!important;
+        }
       }
     }
   }
@@ -155,7 +163,7 @@
       stroke: var(--primary);
       width: 115%;
     }
-    a{
+    span{
       font-size: 13px;
       color: var(--primary);
     }

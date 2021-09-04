@@ -154,9 +154,13 @@
         transition: ease-in-out 0.3s;
       }
       &:hover{
-        @extend .selected;
-        span {
-          font-size: 10px!important;
+        svg{
+          stroke: var(--primary);
+          width: 115%;
+        }
+        span{
+          font-size: 10px;
+          color: var(--primary);
         }
       }
     }

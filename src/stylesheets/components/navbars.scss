@@ -33,8 +33,6 @@
   // nav li class nav-link style
   .nav-link {
     transition: ease-out 0.5s;
-    // debug ?
-    // border: var(--primary) solid 1px;
     a {
       transition: ease-out 0.5s;
       margin: auto;
@@ -51,7 +49,6 @@
       color: var(--primary);
     }
   }
-
 
   .nav-link::after, .nav-link::before {
     content: '';
@@ -99,6 +96,7 @@
     height: auto;
 
     .connect-wrapper {
+      width: 310px;
       padding: 0 50px;
       margin: auto;
 
@@ -106,8 +104,57 @@
         color: black;
         white-space: nowrap;
       }
+      
+    }
+
+    .auth-container {
+
+      position: absolute;
+      top: 79px;
+      width: 310px;
+
+      .auth-menu {
+
+        transition: 0.25s;
+        opacity: 0;
+
+        border: 1px solid var(--primary);
+        background-color: var(--nav-bg);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .auth-link{
+          transition: 0.25s;
+
+          width: 100%;
+          padding: 10px;
+          
+          background-color: var(--nav-bg);
+          
+          color: var(--primary);
+          text-decoration: none;
+          text-align: center;
+          
+        }
+
+        .auth-link:hover{
+          color: var(--primary-dark);
+          background-color: var(--bg);
+        }
+      }
+    }    
+  }
+
+  .connect-container:hover {
+    .auth-container {
+      .auth-menu {
+        opacity: 1;
+      }
     }
   }
+  
 }
 
 // small nav bar
@@ -245,9 +292,11 @@
     }
 
     nav ul {
+
       li {
         padding: 5px 0;
       }
+      
     }
 
   }
@@ -264,9 +313,11 @@
     }
 
     nav ul {
+
       li {
         padding: 5px 1vw;
       }
+
     }
 
   }

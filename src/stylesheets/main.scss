@@ -1,2 +1,16 @@
+//Variables
 @import "vars";
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+//CSS Reset
+@import "reset";
+
+//HTML Component rewrite
+@import "components/html/body";
+
+//App Components
 @import "components/navbars";
+

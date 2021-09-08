@@ -1,19 +1,18 @@
-$old-bg:#FFFBFE;
-$old-primary:#73B62B;
-$old-secondary:#DE9E36;
-$old-text:#565254;
+:root{
+  --nav-bg:#181E24;
+  --bg:#10151C;
+  --primary:#A1EC00;
+  --primary-dark:#89B034;
+  --primary-light:#d7ff54;
 
-$old-bg-dark:#12130F;
-$old-primary-dark:#73B62B;
-$old-secondary-dark:#FFBA49;
-$old-text-dark:#FFEBFD;
+  --font:#797979;
+  --font-secondary:#2c3e50
 
-//Nouvelle proposition de couleur
-$bg:#00190D;
-$primary:#64dd17;
-$primary-light:#9cff57;
-$primary-dark:#1faa00;
-$secondary:#fff99e;
-$secondary-light:#ffffd0;
-$secondary-dark:#cbc66e;
-$text:#fff;
+}
+
+ //Responsive
+ $sm:640px;
+ $md:768px;
+ $lg:1024px;
+ $xl:1280px;
+ $xxl:1536px;

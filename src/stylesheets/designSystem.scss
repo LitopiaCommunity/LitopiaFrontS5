@@ -1,191 +1,104 @@
+$color0: #FEFEFE;
 $color1: #15191E; 
-
-body{
-    background-color: #181E24;
-    margin:0 10%; 
-    font-family: Poppins;
-}
-
-#designSystemColors{
-    display: flex;
-    //width: 1186px;
-    height: 195px;
-    flex-direction: column;
-    justify-content: space-around;
-
-    //border: 1px white solid;
-}
-
-.colors-round{
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-}
-
-#roundColor{    
-    display: flex;
-    justify-content: space-around;
-    background: linear-gradient(270deg, rgba(21,25,30,1) 0%, rgba(194,255,64,1) 100%);
-}
-
-/** Titles **/
-
-.h1{
-    display: flex;
-    //width: 155px;
-    height: 50px;    
-    align-items: center;
-    justify-content: space-around;
-
-    > .h1-hyphen{
-        width: 50px;
-        height: 7px;
-        background-color: #B1F126;
-    }
-
-    > .h1-text{
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 30px;
-        color: #FEFEFE;
-    }
-}
-
-.h2{
-    display: flex;    
-    height: 50px;    
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-
-    > .h2-hyphen{
-        width: 50px;
-        height: 2px;
-        background-color: #B1F126;
-    }
-
-    > .h2-text{
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 30px;
-        color: #B1F126;
-    }
-}
-
-.h3{
-    display: flex;    
-    height: 50px;    
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-
-    > .h3-hyphen{
-        width: 50px;
-        height: 2px;
-        background-color: #FEFEFE;
-    }
-
-    > .h3-text{
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 30px;
-        color: #FEFEFE;
-    }
-}
-
+$color2: #181E24;
+$color3: #1D242C;
+$color4: #394139;
+$color5: #777777;
+$color6: #89B034;
+$color7: #A1EC00;
+$color8: #C2FF40;
+$color9: #F44343;
+$color10: #DF9B35;
 
 /** Colors **/
 
     /** font-colors **/
     .color1{
-        color: #15191E;
+        color: $color1;
     }
 
     .color2{
-        color: #181E24;
+        color: $color2;
     }
 
     .color3{
-        color: #1D242C;
+        color: $color3;
     }
 
     .color4{
-        color: #394139;
+        color: $color4;
     }
 
     .color5{
-        color: #777777;
+        color: $color5;
     }
 
     .color6{
-        color: #89B034;
+        color: $color6;
     }
 
     .color7{
-        color: #A1EC00;
+        color: $color7;
     }
 
     .color8{
-        color: #C2FF40;
+        color: $color8;
     }
 
     .color9{
-        color: #FEFEFE;
+        color: $color9;
     }
 
     .color0{
-        color: #F44343;
+        color: $color0;
     }
 
     .color10{
-        color: #DF9B35;
+        color: $color10;
     }
     /** background-colors **/
     .bg-color1{
-        background-color: #15191E;
+        background-color: $color1;
     }
 
     .bg-color2{
-        background-color: #181E24;
+        background-color: $color2;
     }
 
     .bg-color3{
-        background-color: #1D242C;
+        background-color: $color3;
     }
 
     .bg-color4{
-        background-color: #394139;
+        background-color: $color4;
     }
 
     .bg-color5{
-        background-color: #777777;
+        background-color: $color5;
     }
 
     .bg-color6{
-        background-color: #89B034;
+        background-color: $color6;
     }
 
     .bg-color7{
-        background-color: #A1EC00;
+        background-color: $color7;
     }
 
     .bg-color8{
-        background-color: #C2FF40;
+        background-color: $color8;
     }
 
     .bg-color9{
-        background-color: #FEFEFE;
+        background-color: $color9;
     }
     
     .bg-color0{
-        background-color: #F44343;
+        background-color: $color0;
     }
 
     .bg-color10{
-        background-color: #DF9B35;
+        background-color: $color10;
     }
 
 /** Fonts **/
@@ -227,22 +140,91 @@ body{
     margin: 60px;
 }
 
-.margin-xl-left{
-    margin-left: 60px;
+.padding-xl{
+    padding: 60px;
 }
 
-.margin-xl-right{
-    margin-right: 60px;
+.margin-l{
+    margin: 30px;
 }
 
-.margin-xl-top{
-    margin-top: 60px;
+.padding-l{
+    padding: 30px;
 }
 
-.margin-xl-bottom{
-    margin-bottom: 60px;
+.margin-m{
+    margin: 25px;
 }
 
+.padding-m{
+    padding: 25px;
+}
+
+.margin-s{
+    margin: 15px;
+}
+
+.padding-s{
+    padding: 15px;
+}
+
+.margin-xs{
+    margin: 5px;
+}
+
+.padding-xs{
+    padding: 5px;
+}
+
+/** Buttons **/
+.button{
+    display: flex;
+    width: 142px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.border-green{
+    border: solid 1px $color7;
+    box-sizing: border-box;
+}
+
+.border-green{
+    border: solid 1px $color3;
+    box-sizing: border-box;
+}
+
+/** Special design system page **/
+
+
+body{
+    background-color: #181E24;
+    margin:0 10%; 
+    font-family: Poppins;
+}
+
+#designSystemColors{
+    display: flex;
+    //width: 1186px;
+    height: 195px;
+    flex-direction: column;
+    justify-content: space-around;
+
+    //border: 1px white solid;
+}
+
+.colors-round{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+#roundColor{    
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(270deg, rgba(21,25,30,1) 0%, rgba(194,255,64,1) 100%);
+}
 
 .designBloc{    
     display: flex; 
@@ -265,5 +247,25 @@ body{
 
 #ID-margin-xl{
     width: 60px;
+    height: 60px;
+}
+
+#ID-margin-l{
+    width: 30px;
     height: 30px;
+}
+
+#ID-margin-m{
+    width: 25px;
+    height: 25px;
+}
+
+#ID-margin-s{
+    width: 15px;
+    height: 15px;
+}
+
+#ID-margin-xs{
+    width: 5px;
+    height: 5px;
 }
